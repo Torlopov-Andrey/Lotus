@@ -1,0 +1,22 @@
+%p#notice= notice
+%p
+  %strong Trainer:
+  = @tng.trainer_id
+  = @tng.trainer.name
+%p
+  %strong Discipline:
+  = @tng.discipline_id
+  = @tng.discipline.name
+  = @tng.discipline.description
+%p
+  %strong Town:
+  = @tng.town_id
+%p
+  %strong Day:
+  = @tng.day
+%p
+  %strong Time:
+  = @tng.time
+= link_to 'Edit', edit_tng_path(@tng)
+|
+= link_to 'Back', tngs_path

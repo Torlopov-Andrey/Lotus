@@ -1,0 +1,2 @@
+module TngsHelper
+end

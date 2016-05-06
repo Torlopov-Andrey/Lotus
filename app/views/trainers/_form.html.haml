@@ -1,0 +1,25 @@
+= form_for(@trainer) do |f|
+  - if @trainer.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@trainer.errors.count, "error")
+        prohibited this trainer from being saved:
+      %ul
+        - @trainer.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = f.label :name
+    %br/
+    = f.text_field :name
+  .field
+    = f.label :discipline_id
+    %br/
+    = f.select :discipline_id, Discipline.all.map { |dis| [dis.name, dis.id] }, {include_blank: true}
+  .field
+    = f.label :town_id
+    %br/
+    = f.select :town_id, Town.all.map {|town| [town.name, town.id] } 
+  .field
+    = f.file_field :photo  
+  .actions
+    = f.submit

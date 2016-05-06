@@ -1,0 +1,20 @@
+%p#notice= notice
+%h1 Listing Visits
+%table
+  %thead
+    %tr
+      %th User
+      %th Tng
+      %th Date
+      %th{:colspan => "3"}
+  %tbody
+    - @visits.each do |visit|
+      %tr
+        %td= visit.user_id
+        %td= visit.tng_id
+        %td= visit.date
+        %td= link_to 'Show', visit
+        %td= link_to 'Edit', edit_visit_path(visit)
+        %td= link_to 'Destroy', visit, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Visit', new_visit_path

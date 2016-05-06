@@ -1,0 +1,16 @@
+%p#notice= notice
+%h1 Listing Disciplines
+%table
+  %thead
+    %tr
+      %th Name
+      %th{:colspan => "3"}
+  %tbody
+    - @disciplines.each do |discipline|
+      %tr
+        %td= discipline.name
+        %td= link_to 'Show', discipline
+        %td= link_to 'Edit', edit_discipline_path(discipline)
+        %td= link_to 'Destroy', discipline, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Discipline', new_discipline_path

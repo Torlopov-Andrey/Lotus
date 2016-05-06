@@ -1,0 +1,17 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @trainer.name
+%p
+  %strong Discipline:
+  = @trainer.discipline_id
+%p
+  %strong Town:
+  = @trainer.town_id
+%p
+  %strong Photo:
+  = image_tag @trainer.photo.avatar
+
+= link_to 'Edit', edit_trainer_path(@trainer)
+|
+= link_to 'Back', trainers_path

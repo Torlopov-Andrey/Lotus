@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %strong User:
+  = @visit.user_id
+%p
+  %strong Tng:
+  = @visit.tng_id
+%p
+  %strong Date:
+  = @visit.date
+= link_to 'Edit', edit_visit_path(@visit)
+|
+= link_to 'Back', visits_path

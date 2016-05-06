@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trainer_id: 1
+  discipline_id: 1
+  town_id: 1
+  day: MyString
+  time: 2016-04-29 23:14:15
+
+two:
+  trainer_id: 1
+  discipline_id: 1
+  town_id: 1
+  day: MyString
+  time: 2016-04-29 23:14:15
