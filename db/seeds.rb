@@ -15,7 +15,7 @@ trainers = Trainer.create ([
                           # { name: 'Алина Кабаева', photo: File.open('app/assets/images/kabaeva.jpg') }, 
                           # { name: 'Майкл Джордан', photo: File.open('app/assets/images/djordan.jpg') }
                           # ])
-{ name: 'Елена Исинбаева', photo: File.open('app/assets/images/isinbaeva.jpg') },
+                          { name: 'Елена Исинбаева' },
                           { name: 'Андрей Аршавин' }, 
                           { name: 'Мария Шарапова' }, 
                           { name: 'Евгений Плющенко' }, 
