@@ -8,12 +8,19 @@
 
 towns = Town.create([{ name: 'Ухта' }, { name: 'Москва' }, { name: 'Сыктывкар' }])
 trainers = Trainer.create ([
-                          { name: 'Елена Исинбаева', photo: File.open('app/assets/images/isinbaeva.jpg') },
-                          { name: 'Андрей Аршавин', photo: File.open('app/assets/images/andrej-arshavin.jpg') }, 
-                          { name: 'Мария Шарапова', photo: File.open('app/assets/images/sharapova.jpg') }, 
-                          { name: 'Евгений Плющенко', photo: File.open('app/assets/images/plushenko.jpg') }, 
-                          { name: 'Алина Кабаева', photo: File.open('app/assets/images/kabaeva.jpg') }, 
-                          { name: 'Майкл Джордан', photo: File.open('app/assets/images/djordan.jpg') }
+                          # { name: 'Елена Исинбаева', photo: File.open('app/assets/images/isinbaeva.jpg') },
+                          # { name: 'Андрей Аршавин', photo: File.open('app/assets/images/andrej-arshavin.jpg') }, 
+                          # { name: 'Мария Шарапова', photo: File.open('app/assets/images/sharapova.jpg') }, 
+                          # { name: 'Евгений Плющенко', photo: File.open('app/assets/images/plushenko.jpg') }, 
+                          # { name: 'Алина Кабаева', photo: File.open('app/assets/images/kabaeva.jpg') }, 
+                          # { name: 'Майкл Джордан', photo: File.open('app/assets/images/djordan.jpg') }
+                          # ])
+                          { name: 'Елена Исинбаева' },
+                          { name: 'Андрей Аршавин' }, 
+                          { name: 'Мария Шарапова' }, 
+                          { name: 'Евгений Плющенко' }, 
+                          { name: 'Алина Кабаева' }, 
+                          { name: 'Майкл Джордан' }
                           ])
 description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
