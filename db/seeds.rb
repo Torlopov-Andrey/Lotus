@@ -6,22 +6,24 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-towns = Town.create([{ name: 'Ухта' }, { name: 'Москва' }, { name: 'Сыктывкар' }])
+towns = Town.create([ { name: 'Ухта', address: 'ул. Коммунальная, д. 7', phone: '8 (8216) 77-83-35' }, 
+                    { name: 'Москва', address: 'ул. Профсоюзная, д. 5/9', phone: '8 (499) 125-55-38' }, 
+                    { name: 'Сыктывкар', address: 'ул. Коммунмстическая, д. 50а', phone: '8 (8212) 577-443' }])
 trainers = Trainer.create ([
-                          # { name: 'Елена Исинбаева', photo: File.open('app/assets/images/isinbaeva.jpg') },
-                          # { name: 'Андрей Аршавин', photo: File.open('app/assets/images/andrej-arshavin.jpg') }, 
-                          # { name: 'Мария Шарапова', photo: File.open('app/assets/images/sharapova.jpg') }, 
-                          # { name: 'Евгений Плющенко', photo: File.open('app/assets/images/plushenko.jpg') }, 
-                          # { name: 'Алина Кабаева', photo: File.open('app/assets/images/kabaeva.jpg') }, 
-                          # { name: 'Майкл Джордан', photo: File.open('app/assets/images/djordan.jpg') }
-                          # ])
-                          { name: 'Елена Исинбаева' },
-                          { name: 'Андрей Аршавин' }, 
-                          { name: 'Мария Шарапова' }, 
-                          { name: 'Евгений Плющенко' }, 
-                          { name: 'Алина Кабаева' }, 
-                          { name: 'Майкл Джордан' }
+                          { name: 'Елена Исинбаева', photo: File.open('app/assets/images/isinbaeva.jpg') },
+                          { name: 'Андрей Аршавин', photo: File.open('app/assets/images/andrej-arshavin.jpg') }, 
+                          { name: 'Мария Шарапова', photo: File.open('app/assets/images/sharapova.jpg') }, 
+                          { name: 'Евгений Плющенко', photo: File.open('app/assets/images/plushenko.jpg') }, 
+                          { name: 'Алина Кабаева', photo: File.open('app/assets/images/kabaeva.jpg') }, 
+                          { name: 'Майкл Джордан', photo: File.open('app/assets/images/djordan.jpg') }
                           ])
+                          # { name: 'Елена Исинбаева' },
+                          # { name: 'Андрей Аршавин' }, 
+                          # { name: 'Мария Шарапова' }, 
+                          # { name: 'Евгений Плющенко' }, 
+                          # { name: 'Алина Кабаева' }, 
+                          # { name: 'Майкл Джордан' }
+                          # ])
 description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
@@ -40,7 +42,7 @@ disciplines = Discipline.create ([
 # trainer = trainers.shuffle.first
 
 tngs = (10..23).to_a.map do |time|
-  ["#{time}:00".to_time, disciplines.sample, trainers.sample, towns.first, '1']
+  ["#{time}:00".to_time, Discipline.all.sample, Trainer.all.sample, towns.first, '1']
 end
 
 

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'adresses/show'
+
   resources :visits
   resources :users
   resources :tngs
@@ -9,6 +11,7 @@ Rails.application.routes.draw do
   namespace :api, path: 'api/v1', module: 'api/v1' do
     resources :schedules
     resources :trainers
+    resources :towns
   end  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
