@@ -4,7 +4,7 @@ class TngsController < ApplicationController
   # GET /tngs
   # GET /tngs.json
   def index
-    @tngs = Tng.all
+    @tngs = Tng.all.group_by {|a| a.day}
   end
 
   # GET /tngs/1

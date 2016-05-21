@@ -1,28 +1,14 @@
-%p#notice= notice
-%h1 Listing Tngs
-%table
-  %thead
-    %tr
-      %th Trainer
-      %th Discipline
-      %th Town
-      %th Hall
-      %th Day
-      %th Time
-      %th{:colspan => "3"}
-    %tbody
-      - @tngs.each do |tng|
-        %tr
-          %td= tng.trainer.name
-          %td= tng.discipline.name
-          %td= tng.town.name
-          %td= tng.hall
-          %td= tng.day
-          %td= tng.time.in_time_zone("Moscow").to_formatted_s(:time)
-          %td= link_to 'Show', tng
-          %td= link_to 'Edit', edit_tng_path(tng)
-          %td= link_to 'Destroy', tng, method: :delete, data: { confirm: 'Are you sure?' }
-  %br/
-= link_to 'New Tng', new_tng_path
+= form_for Visit.new do |f|
+  - (Date.today..Date.today.end_of_week.weeks_since(2)).each do |day| 
+    = day
+    - Tng.where(day: day.wday).each do |tng|
+      = tng.discipline.name
+      .field
+        = f.hidden_field :tng_id, value: tng.id
+        = f.hidden_field :date, value: day
+        = f.submit 'записаться'  
+    %br/
 
 
+  
+ 

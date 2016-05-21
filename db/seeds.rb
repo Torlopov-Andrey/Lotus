@@ -17,13 +17,7 @@ trainers = Trainer.create ([
                           { name: 'Алина Кабаева', photo: File.open('app/assets/images/kabaeva.jpg') }, 
                           { name: 'Майкл Джордан', photo: File.open('app/assets/images/djordan.jpg') }
                           ])
-                          # { name: 'Елена Исинбаева' },
-                          # { name: 'Андрей Аршавин' }, 
-                          # { name: 'Мария Шарапова' }, 
-                          # { name: 'Евгений Плющенко' }, 
-                          # { name: 'Алина Кабаева' }, 
-                          # { name: 'Майкл Джордан' }
-                          # ])
+                          
 description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
@@ -46,7 +40,7 @@ tngs = (10..23).to_a.map do |time|
 end
 
 
-(1..7).to_a.each do |day|
+(0..6).to_a.each do |day|
   tngs.each do |time, discipline, trainer, town, hall|
     Tng.create(day: day, time: time, discipline: discipline, trainer: trainer, town: town, hall: hall )
   end  
